@@ -7,7 +7,7 @@ import com.itextpdf.kernel.pdf.PdfWriter;
 import java.io.File;
 import java.io.IOException;
 
-public class removeOutlines {
+public class removeAllOutlines {
 
     public static final String DEST = "results/outlinechanged.pdf";
 
@@ -17,9 +17,8 @@ public class removeOutlines {
         new removeOutlines().removeAllOutlines(DEST);
     }
     
-    public void removeAllOutlines(String DEST) throws IOException {
+    public void removeWholeOutlineSubtree(String DEST) throws IOException {
         String input = "resources/example_document_2.pdf";
-        // String cmp = sourceFolder + "cmp_" + filename;
         PdfReader reader = new PdfReader(input);
         PdfWriter writer = new PdfWriter(DEST);
         PdfDocument pdfDocument = new PdfDocument(reader, writer);
