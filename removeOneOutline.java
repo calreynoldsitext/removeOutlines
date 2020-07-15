@@ -19,7 +19,7 @@ public class removeOneOutline {
         new removeOneOutline().removeOneOutline(DEST);
     }
 
-    public void removeOneOutline(String DEST) throws IOException {
+    public void removeOneOutlineSubtree(String DEST) throws IOException {
         String input = "resources/example_document_2.pdf";
         PdfReader reader = new PdfReader(input);
         PdfWriter writer = new PdfWriter(DEST);
